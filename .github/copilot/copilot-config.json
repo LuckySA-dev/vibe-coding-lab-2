@@ -1,0 +1,48 @@
+{
+  "patterns": {
+    "security": {
+      "patterns": [
+        "password",
+        "secret",
+        "token",
+        "api_key",
+        "private_key"
+      ],
+      "exclude": [
+        "**/test/**",
+        "**/tests/**"
+      ]
+    },
+    "style": {
+      "patterns": [
+        "className=\"[^\"]*\"",
+        "style={{[^}]*}}"
+      ]
+    }
+  },
+  "vetting": {
+    "enabled": true,
+    "trusted_repositories": [
+      "LuckySA-dev/vibe-coding-lab-2"
+    ]
+  },
+  "suggestions": {
+    "autoComplete": true,
+    "inlineCompletions": true,
+    "maxSuggestionsPerRequest": 5
+  },
+  "testing": {
+    "generateTests": true,
+    "testFiles": ["**/*.test.ts", "**/*.test.tsx"]
+  },
+  "documentation": {
+    "requireJsDoc": true,
+    "requireParams": true,
+    "requireReturns": true
+  },
+  "typescript": {
+    "strict": true,
+    "noImplicitAny": true,
+    "noUncheckedIndexedAccess": true
+  }
+}
